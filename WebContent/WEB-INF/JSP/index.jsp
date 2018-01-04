@@ -44,6 +44,10 @@
 			<br>
 			${zaakvoerder.adres.postcode} ${zaakvoerder.adres.gemeente}
 		</dd>
+		<dt>Aantal pizza's verkocht</dt>
+		<dd>
+			<fmt:formatNumber value='${aantalPizzasVerkocht}' />
+		</dd>
 	</dl>
 	<div>
 		WebMaster:

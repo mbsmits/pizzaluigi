@@ -24,6 +24,10 @@ public class IdentificatieServlet extends HttpServlet {
 			if (gebruikersnaam != null) {
 				request.setAttribute("gebruikersnaam", gebruikersnaam);
 			}
+			String locale = request.getParameter("locale");
+			if (locale != null) {
+				session.setAttribute("locale", locale);
+			}
 		}
 		request.getRequestDispatcher(VIEW).forward(request, response);
 	}
