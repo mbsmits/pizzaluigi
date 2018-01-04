@@ -1,6 +1,7 @@
 package be.vdab.servlets;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.servlet.ServletException;
@@ -15,18 +16,18 @@ import be.vdab.entities.Persoon;
 
 @WebServlet(urlPatterns = "/index.htm", name = "indexservlet")
 public class IndexServlet extends HttpServlet {
-
-	private static final long serialVersionUID = 1L;
-	private static final String VIEW = "/WEB-INF/JSP/index.jsp";
-	private static final String INDEX_REQUESTS = "indexRequests";
-
+	
+	private static final long	serialVersionUID	= 1L;
+	private static final String	VIEW				= "/WEB-INF/JSP/index.jsp";
+	private static final String	INDEX_REQUESTS		= "indexRequests";
+	
 	private final AtomicInteger aantalKeerBekeken = new AtomicInteger();
-
+	
 	@Override
 	public void init() throws ServletException {
 		getServletContext().setAttribute(INDEX_REQUESTS, new AtomicInteger());
 	}
-
+	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -36,7 +37,9 @@ public class IndexServlet extends HttpServlet {
 		request.setAttribute("zaakvoerder",
 				new Persoon("Luigi", "Peperone", 7, true, new Adres("Grote markt", "3", 9700, "Oudenaarde")));
 		request.setAttribute("emailAdresWebMaster", getServletContext().getInitParameter("emailAdresWebMaster"));
+		LocalDateTime nu = LocalDateTime.now();
+		request.setAttribute("nu", nu);
 		request.getRequestDispatcher(VIEW).forward(request, response);
 	}
-
+	
 }

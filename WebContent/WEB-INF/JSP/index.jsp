@@ -7,6 +7,10 @@
 	prefix='c'
 	uri='http://java.sun.com/jsp/jstl/core'
 %>
+<%@taglib
+	prefix='fmt'
+	uri='http://java.sun.com/jsp/jstl/fmt'
+%>
 <!doctype html>
 <html lang='nl'>
 <head>
@@ -46,5 +50,15 @@
 		<a href='mailto:${emailAdresWebMaster}'>${emailAdresWebMaster}</a>
 	</div>
 	<div>Deze pagina werd ${aantalKeerBekeken} keer bekeken.</div>
+	<fmt:parseDate
+		value="${nu}"
+		pattern="yyyy-MM-dd"
+		var="nuAlsDate"
+		type="date"
+	/>
+	<div>
+		Vandaag:
+		<fmt:formatDate value='${nuAlsDate}' />
+	</div>
 </body>
 </html>
