@@ -16,17 +16,17 @@ import be.vdab.repositories.PizzaRepository;
 
 @WebServlet("/pizzas/voorkeuren.htm")
 public class VoorkeurPizzasServlet extends HttpServlet {
-	
-	private static final long	serialVersionUID	= 1L;
-	private static final String	VIEW				= "/WEB-INF/JSP/voorkeurpizzas.jsp";
-	
+
+	private static final long serialVersionUID = 1L;
+	private static final String VIEW = "/WEB-INF/JSP/voorkeurpizzas.jsp";
+
 	private final transient PizzaRepository pizzaRepository = new PizzaRepository();
-	
+
 	@Resource(name = PizzaRepository.JNDI_NAME)
 	void setDataSource(DataSource dataSource) {
 		pizzaRepository.setDataSource(dataSource);
 	}
-	
+
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

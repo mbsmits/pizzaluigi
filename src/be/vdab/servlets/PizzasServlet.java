@@ -20,26 +20,26 @@ import be.vdab.repositories.PizzaRepository;
 
 @WebServlet("/pizzas.htm")
 public class PizzasServlet extends HttpServlet {
-	
-	private static final long	serialVersionUID	= 1L;
-	private static final String	VIEW				= "/WEB-INF/JSP/pizzas.jsp";
-	private static final String	PIZZAS_REQUESTS		= "pizzasRequests";
-	
+
+	private static final long serialVersionUID = 1L;
+	private static final String VIEW = "/WEB-INF/JSP/pizzas.jsp";
+	private static final String PIZZAS_REQUESTS = "pizzasRequests";
+
 	private String pizzaFotosPad;
-	
+
 	private final transient PizzaRepository pizzaRepository = new PizzaRepository();
-	
+
 	@Resource(name = PizzaRepository.JNDI_NAME)
 	void setDataSource(DataSource dataSource) {
 		pizzaRepository.setDataSource(dataSource);
 	}
-	
+
 	@Override
 	public void init() throws ServletException {
 		getServletContext().setAttribute(PIZZAS_REQUESTS, new AtomicInteger());
 		pizzaFotosPad = getServletContext().getRealPath("/pizzafotos");
 	}
-	
+
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -51,5 +51,5 @@ public class PizzasServlet extends HttpServlet {
 						.map(pizza -> pizza.getId()).collect(Collectors.toList()));
 		request.getRequestDispatcher(VIEW).forward(request, response);
 	}
-	
+
 }

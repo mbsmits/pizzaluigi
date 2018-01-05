@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/statistiek.htm")
 public class StatistiekServlet extends HttpServlet {
-	
+
 	private static final long serialVersionUID = 1L;
 	private static final String VIEW = "/WEB-INF/JSP/statistiek.jsp";
 
@@ -19,5 +19,5 @@ public class StatistiekServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.getRequestDispatcher(VIEW).forward(request, response);
 	}
-	
+
 }
