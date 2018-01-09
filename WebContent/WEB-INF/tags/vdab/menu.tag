@@ -1,7 +1,6 @@
-<%@page
-	contentType='text/html'
+<%@tag
+	description='menu'
 	pageEncoding='UTF-8'
-	session='false'
 %>
 <%@taglib
 	prefix='c'

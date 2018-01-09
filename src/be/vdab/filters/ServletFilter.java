@@ -12,20 +12,20 @@ import javax.servlet.annotation.WebFilter;
 
 @WebFilter("*.htm")
 public class ServletFilter implements Filter {
-
+	
 	@Override
 	public void init(FilterConfig fConfig) throws ServletException {
 	}
-
+	
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		request.setCharacterEncoding("UTF-8");
 		chain.doFilter(request, response);
 	}
-
+	
 	@Override
 	public void destroy() {
 	}
-
+	
 }

@@ -4,23 +4,22 @@
 	session='false'
 %>
 <%@taglib
+	uri='http://vdab.be/tags'
+	prefix='vdab'
+%>
+<%@taglib
 	prefix='c'
 	uri='http://java.sun.com/jsp/jstl/core'
 %>
 <!doctype html>
 <html lang='nl'>
 <head>
-<c:import url='/WEB-INF/JSP/head.jsp'>
-	<c:param
-		name='title'
-		value='Statistieken'
-	/>
-</c:import>
+<vdab:head title='Statistieken' />
 </head>
 <body>
 	<c:import url='/WEB-INF/JSP/menu.jsp' />
 	<h1>Statistiek</h1>
-	<div>${aantalMandjes} mandje(s)</div> 
+	<div>${aantalMandjes}mandje(s)</div>
 	<dl>
 		<dt>Welkom</dt>
 		<dd>${indexRequests}</dd>
