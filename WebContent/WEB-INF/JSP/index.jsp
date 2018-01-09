@@ -1,20 +1,7 @@
-<%@page
-	contentType='text/html'
-	pageEncoding='UTF-8'
-	session='false'
-%>
-<%@taglib
-	uri='http://vdab.be/tags'
-	prefix='vdab'
-%>
-<%@taglib
-	prefix='c'
-	uri='http://java.sun.com/jsp/jstl/core'
-%>
-<%@taglib
-	prefix='fmt'
-	uri='http://java.sun.com/jsp/jstl/fmt'
-%>
+<%@page contentType='text/html' pageEncoding='UTF-8' session='false'%>
+<%@taglib uri='http://vdab.be/tags' prefix='vdab'%>
+<%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
+<%@taglib prefix='fmt' uri='http://java.sun.com/jsp/jstl/fmt'%>
 <!doctype html>
 <html lang='nl'>
 <head>
@@ -23,11 +10,8 @@
 <body>
 	<vdab:menu />
 	<h1>Pizza Luigi</h1>
-	<img
-		src='<c:url value="/images/pizza.jpg"/>'
-		alt='pizza'
-		class='fullwidth'
-	>
+	<img src='<c:url value="/images/pizza.jpg"/>' alt='pizza'
+		class='fullwidth'>
 	<h2>${begroeting}</h2>
 	<h2>De zaakvoerder</h2>
 	<dl>
@@ -39,9 +23,8 @@
 		<dd>${zaakvoerder.gehuwd ? 'Ja' : 'Nee'}</dd>
 		<dt>Adres</dt>
 		<dd>${zaakvoerder.adres.straat}
-			${zaakvoerder.adres.huisNr}
-			<br>
-			${zaakvoerder.adres.postcode} ${zaakvoerder.adres.gemeente}
+			${zaakvoerder.adres.huisNr} <br> ${zaakvoerder.adres.postcode}
+			${zaakvoerder.adres.gemeente}
 		</dd>
 		<dt>Aantal pizza's verkocht</dt>
 		<dd>
@@ -49,16 +32,11 @@
 		</dd>
 	</dl>
 	<div>
-		WebMaster:
-		<a href='mailto:${emailAdresWebMaster}'>${emailAdresWebMaster}</a>
+		WebMaster: <a href='mailto:${emailAdresWebMaster}'>${emailAdresWebMaster}</a>
 	</div>
 	<div>Deze pagina werd ${aantalKeerBekeken} keer bekeken.</div>
-	<fmt:parseDate
-		value="${nu}"
-		pattern="yyyy-MM-dd"
-		var="nuAlsDate"
-		type="date"
-	/>
+	<fmt:parseDate value="${nu}" pattern="yyyy-MM-dd" var="nuAlsDate"
+		type="date" />
 	<div>
 		Vandaag:
 		<fmt:formatDate value='${nuAlsDate}' />

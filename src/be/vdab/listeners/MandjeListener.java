@@ -10,33 +10,33 @@ import javax.servlet.http.HttpSessionBindingEvent;
 
 @WebListener
 public class MandjeListener implements ServletContextListener, HttpSessionAttributeListener {
-	
-	private static final String	MANDJE			= "mandje";
-	private static final String	AANTAL_MANDJES	= "aantalMandjes";
-	
+
+	private static final String MANDJE = "mandje";
+	private static final String AANTAL_MANDJES = "aantalMandjes";
+
 	@Override
 	public void contextInitialized(ServletContextEvent event) {
 		event.getServletContext().setAttribute(AANTAL_MANDJES, new AtomicInteger());
 	}
-	
+
 	@Override
 	public void contextDestroyed(ServletContextEvent event) {
 	}
-	
+
 	@Override
 	public void attributeAdded(HttpSessionBindingEvent event) {
 		if (MANDJE.equals(event.getName())) {
 			((AtomicInteger) event.getSession().getServletContext().getAttribute(AANTAL_MANDJES)).incrementAndGet();
 		}
 	}
-	
+
 	@Override
 	public void attributeRemoved(HttpSessionBindingEvent event) {
 		if (MANDJE.equals(event.getName())) {
 			((AtomicInteger) event.getSession().getServletContext().getAttribute(AANTAL_MANDJES)).decrementAndGet();
 		}
 	}
-	
+
 	@Override
 	public void attributeReplaced(HttpSessionBindingEvent event) {
 	}

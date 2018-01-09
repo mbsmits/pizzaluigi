@@ -1,12 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE xml>	<!--  suppresses annoying warning -->
+<!DOCTYPE xml>	<!-- suppresses annoying warning -->
 <Context path='/pizzaluigi'>
-	<Resource
-		name='jdbc/pizzaluigi'
-		type='javax.sql.DataSource'
-		driverClassName='com.mysql.jdbc.Driver'
-		url='jdbc:mysql://localhost/pizzaluigi?useSSL=false'
-		username='cursist'
-		password='cursist'
-		closeMethod='close' />
+	<Resource name='jdbc/pizzaluigi' type='javax.sql.DataSource'
+		driverClassName='com.mysql.jdbc.Driver' url='jdbc:mysql://localhost/pizzaluigi?useSSL=false'
+		username='cursist' password='cursist' closeMethod='close' />
 </Context>
