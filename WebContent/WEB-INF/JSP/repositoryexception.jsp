@@ -17,7 +17,7 @@
 <vdab:head title='Problemen bij ophalen data' />
 </head>
 <body>
-	<c:import url='/WEB-INF/JSP/menu.jsp' />
+	<vdab:menu />
 	<h1>Problemen bij het ophalen van data</h1>
 	<img
 		src='<c:url value="/images/datafout.jpg"/>'

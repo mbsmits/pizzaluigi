@@ -17,7 +17,7 @@
 <vdab:head title='Pizza toevoegen' />
 </head>
 <body>
-	<c:import url='/WEB-INF/JSP/menu.jsp' />
+	<vdab:menu />
 	<h1>Pizza toevoegen</h1>
 	<form
 		method='post'

@@ -17,7 +17,7 @@
 <vdab:head title='Pagina niet gevonden' />
 </head>
 <body>
-	<c:import url='/WEB-INF/JSP/menu.jsp' />
+	<vdab:menu />
 	<h1>Pagina niet gevonden</h1>
 	<img
 		src='<c:url value="/images/fout.jpg"/>'

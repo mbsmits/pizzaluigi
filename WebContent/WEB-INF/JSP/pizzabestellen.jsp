@@ -16,7 +16,7 @@
 <vdab:head title='Bestellen' />
 </head>
 <body>
-	<c:import url='/WEB-INF/JSP/menu.jsp' />
+	<vdab:menu />
 	<h1>Pizza's bestellen</h1>
 	<c:if test='${not empty allePizzas}'>
 		<h2>Assortiment</h2>

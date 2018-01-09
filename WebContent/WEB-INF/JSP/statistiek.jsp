@@ -17,7 +17,7 @@
 <vdab:head title='Statistieken' />
 </head>
 <body>
-	<c:import url='/WEB-INF/JSP/menu.jsp' />
+	<vdab:menu />
 	<h1>Statistiek</h1>
 	<div>${aantalMandjes}mandje(s)</div>
 	<dl>

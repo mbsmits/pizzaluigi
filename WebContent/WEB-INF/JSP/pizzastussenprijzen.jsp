@@ -17,7 +17,7 @@
 <vdab:head title='Pizzas tussen prijzen' />
 </head>
 <body>
-	<c:import url='/WEB-INF/JSP/menu.jsp' />
+	<vdab:menu />
 	<h1>Pizza's tussen prijzen</h1>
 	<form>
 		<label>

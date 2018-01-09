@@ -17,7 +17,7 @@
 <vdab:head title="Pizza's" />
 </head>
 <body>
-	<c:import url='/WEB-INF/JSP/menu.jsp' />
+	<vdab:menu />
 	<dl>
 		<c:forEach
 			var='h'

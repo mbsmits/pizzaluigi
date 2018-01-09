@@ -17,7 +17,7 @@
 <vdab:head title='${pizza.naam}' />
 </head>
 <body>
-	<c:import url='/WEB-INF/JSP/menu.jsp' />
+	<vdab:menu />
 	<c:choose>
 		<c:when test='${not empty fout}'>
 			<div class='fout'>${fout}</div>

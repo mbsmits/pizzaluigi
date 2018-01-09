@@ -24,7 +24,7 @@
 <vdab:head title='Identificatie' />
 </head>
 <body>
-	<c:import url='/WEB-INF/JSP/menu.jsp' />
+	<vdab:menu />
 	<h1>
 		<fmt:message key='identificatie' />
 	</h1>

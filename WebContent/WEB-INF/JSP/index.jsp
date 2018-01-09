@@ -21,7 +21,7 @@
 <vdab:head title='Pizza Luigi' />
 </head>
 <body>
-	<c:import url='/WEB-INF/JSP/menu.jsp' />
+	<vdab:menu />
 	<h1>Pizza Luigi</h1>
 	<img
 		src='<c:url value="/images/pizza.jpg"/>'

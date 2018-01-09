@@ -17,7 +17,7 @@
 <vdab:head title="Voorkeurpizza’s" />
 </head>
 <body>
-	<c:import url='/WEB-INF/JSP/menu.jsp' />
+	<vdab:menu />
 	<h1>Voorkeurpizza's</h1>
 	<form>
 		<ul class='zonderbolletjes'>
