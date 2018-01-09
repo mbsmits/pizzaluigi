@@ -19,8 +19,7 @@
 				<a href="<c:url value='/statistiek.htm'/>">Statistiek</a>
 			</li>
 			<li>
-				<a href="<c:url value='/pizzas/tussenprijzen.htm'/>">Pizza’s
-					tussen prijzen </a>
+				<a href="<c:url value='/pizzas/tussenprijzen.htm'/>">Pizza's tussen prijzen</a>
 			</li>
 			<li>
 				<a href="<c:url value='/pizzas/voorkeuren.htm'/>">Voorkeurpizza's</a>
