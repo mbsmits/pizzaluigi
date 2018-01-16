@@ -19,18 +19,18 @@ import be.vdab.repositories.PizzaRepository;
 
 @WebServlet("/pizzas/bestellen.htm")
 public class PizzaBestellenServlet extends HttpServlet {
-
-	private static final long serialVersionUID = 1L;
-	private static final String VIEW = "/WEB-INF/JSP/pizzabestellen.jsp";
-	private static final String MANDJE = "mandje";
-
+	
+	private static final long	serialVersionUID	= 1L;
+	private static final String	VIEW				= "/WEB-INF/JSP/pizzabestellen.jsp";
+	private static final String	MANDJE				= "mandje";
+	
 	private final transient PizzaRepository pizzaRepository = new PizzaRepository();
-
+	
 	@Resource(name = PizzaRepository.JNDI_NAME)
 	void setDataSource(DataSource dataSource) {
 		pizzaRepository.setDataSource(dataSource);
 	}
-
+	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -48,7 +48,7 @@ public class PizzaBestellenServlet extends HttpServlet {
 		}
 		request.getRequestDispatcher(VIEW).forward(request, response);
 	}
-
+	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
